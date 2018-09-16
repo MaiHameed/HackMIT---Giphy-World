@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>Giphy World</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+		<noscript><link rel="stylesheet" href="{% static "assets/css/noscript.css" %}" /></noscript>
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+			
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Giphy World</h2>
+							<p>A safe for work gif search</br>
+							Enter your query here:</br>
+								<form action="/" method="post">
+									{% csrf_token %}
+								<input name="textarea" style="width: 50%; text-align: center; margin-left: 25%; margin-top: 7px; margin-bottom: 15px;" type="text" id="{{ form.textarea.id_for_label }}">
+							<input type="submit" value="Submit"></form></p>
+						</div>
+					</section>
+			</div>
+
+			<script src="{% static "assets/js/jquery.min.js" %}"></script>
+			<script src="{% static "assets/js/breakpoints.min.js" %}"></script>
+			<script src="{% static "assets/js/main.js" %}"></script>
+	</body>
+</html>

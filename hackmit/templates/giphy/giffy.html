@@ -1,0 +1,15 @@
+<!-- 1st row verticaly centered text in the square columns -->
+<html>
+{% load static %}
+<head>
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+
+<body>
+
+{% for item in gifs %}
+<div class="square" style="background-image:url('{{ item }}')">
+</div>
+{% endfor %}
+</body>
+</html>
